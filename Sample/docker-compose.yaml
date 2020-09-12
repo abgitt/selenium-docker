@@ -1,0 +1,19 @@
+version: "3"
+services:
+  search-module:
+    image: abgitt/selenium-docker-flight:v-3
+    environment:
+      - BROWSER=chrome
+      - HUB_HOST=192.168.1.8
+      - MODULE=search-module.xml
+    volumes:
+      - C:\Users\Abilash\Desktop\DockerMapper\search-results:/usr/share/abilash/test-output
+  book-flight-module:
+    image: abgitt/selenium-docker-flight:v-3
+    environment:
+      - BROWSER=chrome
+      - HUB_HOST=192.168.1.8
+      - MODULE=book-flight-module.xml
+    volumes:
+      - C:\Users\Abilash\Desktop\DockerMapper\book-flight-results:/usr/share/abilash/test-output
+      
