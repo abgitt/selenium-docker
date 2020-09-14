@@ -11,7 +11,7 @@ pipeline {
         stage('Build Image') {
             steps {
                 //sh
-                bat "docker build -t='abgitt/selenium-docker-flight' ."
+                bat "docker build --tag abgitt/selenium-docker-flight ."
             }
         }
         stage('Push Image') {
